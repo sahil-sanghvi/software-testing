@@ -49,8 +49,7 @@ JPacman is created and maintained by Arie van Deursen and contributors, licensed
 
 ## 🎓 Project Context
 
-Built as part of **SENG 275: Software Development Methods II** at the University of
-Victoria.
+Built as part of **SENG 275: Software Testing** at the University of Victoria.
 
 ## ⚠️ Academic Integrity Notice
 
