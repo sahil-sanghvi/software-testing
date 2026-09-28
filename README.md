@@ -3,7 +3,7 @@
 
 # Pacman Test Suite
 
-A set of test files written against **JPacman**, the open-source Pac-Man implementation created and maintained by Arie van Deursen (see `UPSTREAM-LICENSE.txt` and the attribution below). This is a testing exercise, not a Pac-Man implementation — none of the game engine is mine or included here.
+A set of test files written against **[JPacman](https://github.com/SERG-Delft/jpacman-framework)**, the open-source Pac-Man implementation created and maintained by Arie van Deursen at TU Delft's Software Engineering Research Group (see `UPSTREAM-LICENSE.txt` and the attribution below). This is a testing exercise, not a Pac-Man implementation — none of the game engine is mine or included here; clone it from the link above to run these tests against real code.
 
 ## What's here
 
@@ -23,7 +23,25 @@ The property-based tests generate many randomized inputs per run rather than a f
 
 ## Running these tests
 
-These tests compile against JPacman's `board`, `game`, `level`, and `npc.ghost` packages, JUnit 5, jqwik (property-based testing), AssertJ, and Mockito — none of which are vendored here. To run them, drop `src/test/java/nl/tudelft/jpacman/` from this folder into a checkout of the JPacman engine at the matching path, then run its Gradle test task.
+These tests compile against JPacman's `board`, `game`, `level`, and `npc.ghost`
+packages, JUnit 5, jqwik (property-based testing), AssertJ, and Mockito — none of
+which are vendored here, since this repo is the tests, not the engine.
+
+To run them yourself:
+
+1. Clone the engine this test suite targets:
+   ```bash
+   git clone https://github.com/SERG-Delft/jpacman-framework.git
+   ```
+2. Copy this repo's `src/test/java/nl/tudelft/jpacman/` into the cloned engine at the
+   same path, overwriting/merging with its existing `src/test/java/nl/tudelft/jpacman/`.
+3. Run the engine's Gradle test task from inside that checkout:
+   ```bash
+   ./gradlew test
+   ```
+
+The engine repo already includes JUnit 5, jqwik, AssertJ, and Mockito as test
+dependencies in its own `build.gradle`, so no extra setup is needed beyond that.
 
 ## Attribution
 
